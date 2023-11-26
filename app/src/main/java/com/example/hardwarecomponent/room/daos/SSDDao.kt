@@ -15,12 +15,12 @@ interface SSDDao {
     @Update
     fun update(sdd: SSD)
 
-    @Query("SELECT * FROM SDD WHERE id = :sddId")
+    @Query("SELECT * FROM SSD WHERE id = :sddId")
     fun getSDDById(sddId: Int): SSD?
 
-    @Query("SELECT * FROM SDD")
+    @Query("SELECT * FROM SSD")
     fun getAllSDDs(): List<SSD>
 
-    @Query("DELETE FROM SDD WHERE id = :sddId")
+    @Query("DELETE FROM SSD WHERE id = :sddId")
     fun deleteSDD(sddId: Int)
 }
