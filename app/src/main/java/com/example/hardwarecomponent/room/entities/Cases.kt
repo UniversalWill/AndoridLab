@@ -14,5 +14,5 @@ data class Cases(
     val name: String,
 
     @ColumnInfo(name = "price")
-    val price: Double?
+    val price: Int?
 )

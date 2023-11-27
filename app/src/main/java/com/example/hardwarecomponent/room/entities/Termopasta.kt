@@ -8,12 +8,12 @@ import androidx.room.PrimaryKey
 data class Termopasta(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    val id: Int = 0,
+    val id: Int? = null,
 
     @ColumnInfo(name = "name")
     val name: String,
 
     @ColumnInfo(name = "price")
-    val price: Double?
+    val price: Int?
 )
 
