@@ -1,5 +1,6 @@
 package com.example.hardwarecomponent.room.daos
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -19,7 +20,7 @@ interface CPUDao {
      fun getCPUById(cpuId: Int): CPU?
 
     @Query("SELECT * FROM CPU")
-     fun getAllCPUs(): List<CPU>
+     fun getAllCPUs(): LiveData<List<CPU>>
 
     @Query("DELETE FROM CPU WHERE id = :cpuId")
      fun deleteCPU(cpuId: Int)
